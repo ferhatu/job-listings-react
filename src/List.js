@@ -1,16 +1,18 @@
 import React from "react";
 import Listing from "./Listing";
-import data from "./src/data";
+import data from "./data.json";
 const List = () => {
-    return(
-        {data.map((job) => {
-            return (
-                <div>
-                    <Listing job={job[0]} />
-                </div>
-            )
-        })
-    }
-    )};
-  
+  return (
+    <div>
+      {data.map((job) => {
+        return (
+          <div key={job.id}>
+            <Listing job={job} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default List;

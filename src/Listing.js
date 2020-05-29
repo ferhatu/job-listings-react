@@ -2,8 +2,8 @@ import React from "react";
 
 const Listing = (props) => {
   return (
-    <div>
-      <span>{props.job.company}</span>
+    <div className="logo">
+      <img src={props.job.logo} alt="logo" />
     </div>
   );
 };

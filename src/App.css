@@ -17,10 +17,28 @@
   display: flex;
   flex-direction: row;
 }
+.listing-secondRow {
+  display: flex;
+}
+.position {
+  margin-right: 400px;
+}
+.role-level-language {
+  display: flex;
+  flex-direction: row;
+}
+.role,
+.level,
+.language {
+  color: cornflowerblue;
+  font-weight: 500;
+  margin-right: 15px;
+}
 .listing-thirdRow {
   display: flex;
   flex-direction: row;
   margin-right: 5px;
+  font-weight: 460;
 }
 .day {
   margin-right: 8px;

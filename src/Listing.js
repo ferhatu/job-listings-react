@@ -1,4 +1,5 @@
 import React from "react";
+// import Header from "./public/images/bg-header-desktop";
 
 const Listing = (props) => {
   // const [age, setAge] = useState(false);
@@ -25,7 +26,22 @@ const Listing = (props) => {
             </div>
           </div>
           <div className="listing-secondRow">
-            <span className="position">{props.job.position}</span>
+            <div className="position">
+              <span>{props.job.position}</span>
+            </div>
+            <div className="role-level-language">
+              <div>
+                <span className="role">{props.job.role}</span>
+              </div>
+              <div>
+                <span className="level">{props.job.level}</span>
+              </div>
+              <div>
+                {props.job.languages.map((language) => {
+                  return <span className="language">{language}</span>;
+                })}
+              </div>
+            </div>
           </div>
           <div className="listing-thirdRow">
             <div>

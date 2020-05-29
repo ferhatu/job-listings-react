@@ -8,33 +8,35 @@ const Listing = (props) => {
 
   return (
     <div className="listing-container">
-      <div className="logo">
-        <img src={props.job.logo} alt="logo" />
-      </div>
-      <div className="allRows">
-        <div className="listing-firstRow">
-          <div>
-            <span>{props.job.company}</span>
-          </div>
-          <div>
-            <span>{props.job.new}</span>
-          </div>
-          <div>
-            <span>{props.job.featured}</span>
-          </div>
+      <div className="listing-inner-container">
+        <div className="logo">
+          <img src={props.job.logo} alt="logo" />
         </div>
-        <div className="listing-secondRow">
-          <span>{props.job.position}</span>
-        </div>
-        <div className="listing-thirdRow">
-          <div>
-            <span>{props.job.postedAt}</span>
+        <div className="allRows">
+          <div className="listing-firstRow">
+            <div>
+              <span className="company">{props.job.company}</span>
+            </div>
+            <div>
+              <span>{props.job.new}</span>
+            </div>
+            <div>
+              <span>{props.job.featured}</span>
+            </div>
           </div>
-          <div>
-            <span>{props.job.contract}</span>
+          <div className="listing-secondRow">
+            <span className="position">{props.job.position}</span>
           </div>
-          <div>
-            <span>{props.job.location}</span>
+          <div className="listing-thirdRow">
+            <div>
+              <span className="day">{props.job.postedAt}</span>
+            </div>
+            <div>
+              <span className="fullTime">{props.job.contract}</span>
+            </div>
+            <div>
+              <span className="country">{props.job.location}</span>
+            </div>
           </div>
         </div>
       </div>

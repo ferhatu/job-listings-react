@@ -1,6 +1,10 @@
 .listing-container {
   margin: 20px 0px 10px 15px;
+}
+.listing-inner-container {
   display: flex;
+  border: 3px solid rgb(133, 179, 221);
+  padding: 10px;
 }
 .logo {
   margin-right: 20px;
@@ -16,5 +20,18 @@
 .listing-thirdRow {
   display: flex;
   flex-direction: row;
-  padding-right: 5px;
+  margin-right: 5px;
+}
+.day {
+  margin-right: 8px;
+}
+.fullTime {
+  margin-right: 8px;
+}
+.position {
+  font-weight: bold;
+}
+.company {
+  font-weight: 500;
+  color: rgb(9, 179, 236);
 }

@@ -1,14 +1,19 @@
 .listing-container {
-  margin: 20px 0px 10px 15px;
+  background-color: hsl(180, 52%, 96%);
+  border: 3px solid rgb(210, 223, 235);
+  margin: 10px auto;
+  width: 60%;
 }
 .listing-inner-container {
   display: flex;
-  border: 3px solid rgb(133, 179, 221);
+  align-items: center;
+
   padding: 10px;
 }
 .logo {
+  margin-top: 10px;
   margin-right: 20px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 .allRows {
   flex-direction: column;
@@ -21,18 +26,22 @@
   display: flex;
 }
 .position {
-  margin-right: 400px;
+  margin-right: 40px;
 }
 .role-level-language {
   display: flex;
   flex-direction: row;
+  margin: auto;
+  justify-content: start;
+  color: cornflowerblue;
+  font-weight: 500;
 }
 .role,
 .level,
 .language {
-  color: cornflowerblue;
-  font-weight: 500;
+  background-color: rgb(205, 231, 240);
   margin-right: 15px;
+  border-radius: 2px;
 }
 .listing-thirdRow {
   display: flex;
@@ -50,6 +59,21 @@
   font-weight: bold;
 }
 .company {
+  margin-right: 10px;
   font-weight: 500;
-  color: rgb(9, 179, 236);
+  font-size: 15px;
+  color: rgb(12, 183, 240);
+}
+.new {
+  font-weight: 500;
+  margin-right: 10px;
+  background-color: hsl(207, 55%, 81%);
+  border-radius: 5px;
+}
+.featured {
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  background-color: hsl(210, 4%, 9%);
+  border-radius: 5px;
 }

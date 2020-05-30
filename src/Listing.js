@@ -1,12 +1,6 @@
 import React from "react";
-// import Header from "./public/images/bg-header-desktop";
 
 const Listing = (props) => {
-  // const [age, setAge] = useState(false);
-  // const chooseAge = ()=>{
-  //   return setAge(age) ?
-  // }
-
   return (
     <div className="listing-container">
       <div className="listing-inner-container">
@@ -18,29 +12,12 @@ const Listing = (props) => {
             <div>
               <span className="company">{props.job.company}</span>
             </div>
-            <div>
-              <span>{props.job.new}</span>
-            </div>
-            <div>
-              <span>{props.job.featured}</span>
-            </div>
+            {props.job.new && <div className="new">NEW</div>}
+            {props.job.featured && <div className="featured">FEATURED</div>}
           </div>
           <div className="listing-secondRow">
             <div className="position">
               <span>{props.job.position}</span>
-            </div>
-            <div className="role-level-language">
-              <div>
-                <span className="role">{props.job.role}</span>
-              </div>
-              <div>
-                <span className="level">{props.job.level}</span>
-              </div>
-              <div>
-                {props.job.languages.map((language) => {
-                  return <span className="language">{language}</span>;
-                })}
-              </div>
             </div>
           </div>
           <div className="listing-thirdRow">
@@ -53,6 +30,19 @@ const Listing = (props) => {
             <div>
               <span className="country">{props.job.location}</span>
             </div>
+          </div>
+        </div>
+        <div className="role-level-language">
+          <div>
+            <span className="role">{props.job.role}</span>
+          </div>
+          <div>
+            <span className="level">{props.job.level}</span>
+          </div>
+          <div>
+            {props.job.languages.map((language) => {
+              return <span className="language">{language}</span>;
+            })}
           </div>
         </div>
       </div>

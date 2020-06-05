@@ -40,8 +40,16 @@ const Listing = (props) => {
             <span className="level">{props.job.level}</span>
           </div>
           <div>
-            {props.job.languages.map((language) => {
-              return <span className="language">{language}</span>;
+            {props.job.languages.map((language, index) => {
+              return (
+                <span
+                  key={index}
+                  onClick={(e) => props.addLanguage(language)}
+                  className="language"
+                >
+                  {language}
+                </span>
+              );
             })}
           </div>
         </div>

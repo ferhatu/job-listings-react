@@ -1,13 +1,13 @@
 import React from "react";
 import Listing from "./Listing";
-import data from "./data.json";
-const List = () => {
+
+const List = (props) => {
   return (
     <div>
-      {data.map((job) => {
+      {props.data.map((job, index) => {
         return (
-          <div key={job.id}>
-            <Listing job={job} />
+          <div key={index}>
+            <Listing addLanguage={props.addLanguage} job={job} />
           </div>
         );
       })}

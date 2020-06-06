@@ -34,10 +34,20 @@ const Listing = (props) => {
         </div>
         <div className="role-level-language">
           <div>
-            <span className="role">{props.job.role}</span>
+            <span
+              onClick={(e) => props.addLanguage(props.job.role)}
+              className="role"
+            >
+              {props.job.role}
+            </span>
           </div>
           <div>
-            <span className="level">{props.job.level}</span>
+            <span
+              onClick={(e) => props.addLanguage(props.job.level)}
+              className="level"
+            >
+              {props.job.level}
+            </span>
           </div>
           <div>
             {props.job.languages.map((language, index) => {

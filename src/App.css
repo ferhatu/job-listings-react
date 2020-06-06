@@ -4,6 +4,13 @@
   margin: 10px auto;
   width: 60%;
 }
+.header {
+  height: 100px;
+  width: 80%;
+  margin: auto;
+  background-image: url("./bg-header-desktop.svg");
+  background-color: hsl(180, 29%, 50%);
+}
 .listing-inner-container {
   display: flex;
   align-items: center;
@@ -76,4 +83,17 @@
   color: white;
   background-color: hsl(210, 4%, 9%);
   border-radius: 5px;
+}
+.current-filter {
+  text-align: center;
+  background-color: hsl(180, 52%, 96%);
+  border: 3px solid rgb(210, 223, 235);
+  margin: 10px auto;
+  width: 50%;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(12, 183, 240);
+}
+.current-select {
+  margin-right: 10px;
 }

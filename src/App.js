@@ -6,23 +6,32 @@ import CurrentFilter from "./CurrentFilter";
 
 function App() {
   const [jobFilter, setJobFilter] = useState([]);
-  const addLanguage = (language) => {
-    if (!jobFilter.includes(language)) {
-      setJobFilter((jobFilter) => [...jobFilter, language]);
+
+  const addLanguage = (item) => {
+    if (!jobFilter.includes(item)) {
+      setJobFilter([...jobFilter, item]);
     }
   };
 
   const filteredJobs = () => {
-    const d = data.filter((jobs) =>
-      jobFilter.every((x) => jobs.languages.includes(x))
+    return data.filter((jobs) =>
+      jobFilter.every(
+        (x) =>
+          jobs.languages.includes(x) ||
+          jobs.role.includes(x) ||
+          jobs.level.includes(x)
+      )
     );
+  };
 
-    return d;
+  const removeTag = (value) => {
+    setJobFilter(jobFilter.filter((tags) => tags !== value));
   };
 
   return (
     <div>
-      <CurrentFilter jobFilter={jobFilter} />
+      <header className="header" />
+      <CurrentFilter removeTag={removeTag} jobFilter={jobFilter} />
       <List data={filteredJobs()} addLanguage={addLanguage} />
     </div>
   );

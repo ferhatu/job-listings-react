@@ -86,14 +86,19 @@
 }
 .current-filter {
   text-align: center;
+  transform: translateY(-50%);
   background-color: hsl(180, 52%, 96%);
   border: 3px solid rgb(210, 223, 235);
   margin: 10px auto;
   width: 50%;
+  height: 40px;
+}
+.current-select {
+  background-color: rgb(205, 231, 240);
+
+  margin-top: 10px;
+  margin-right: 10px;
   font-weight: 500;
   font-size: 15px;
   color: rgb(12, 183, 240);
-}
-.current-select {
-  margin-right: 10px;
 }
